@@ -14,8 +14,12 @@ resource "aws_eks_node_group" "main" {
     min_size     = lookup(var.auto_scale_options, "min")
   }
 
+  capacity_type = "ON_DEMAND"
+
   labels = {
-    "ingress/ready" = "true"
+    "capacity/os"   = "AMAZON_LINUX"
+    "capacity/arch" = "x86_64"
+    "capacity/type" = "ON_DEMAND"
   }
 
   tags = {
