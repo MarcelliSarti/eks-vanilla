@@ -71,3 +71,9 @@ module "cluster" {
 
 - O `desired_size` do node group é ignorado em updates subsequentes (`lifecycle.ignore_changes`), para não conflitar com autoscaling em runtime.
 - O node group depende do `aws_eks_access_entry.nodes` — a autenticação dos nodes é feita via Access Entry, não via `aws-auth` ConfigMap legado.
+
+## Release
+0.0.1 - LINUX e ONDEMAND
+0.0.2 - LINUX e SPOT
+0.0.3 - BOTTLEROCKET e ONDEMAND
+0.0.4 - BOTTLEROCKET e SPOT
