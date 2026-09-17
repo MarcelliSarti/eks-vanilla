@@ -1,4 +1,3 @@
-# outputs.tf do eks-vanilla
 output "cluster_name" {
   value = aws_eks_cluster.main.name
 }
