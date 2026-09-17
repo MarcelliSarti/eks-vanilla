@@ -19,7 +19,7 @@ resource "aws_eks_node_group" "graviton_spot" {
 
   capacity_type = "ON_DEMAND"
 
-  ami_type = "AL20203_ARM_64_STANDARD"
+  ami_type = "AL2023_ARM_64_STANDARD"
 
   labels = {
     "capacity/os"   = "AMAZON_LINUX"
